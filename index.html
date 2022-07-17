@@ -2,67 +2,48 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>parte practica</title>
+<title>archivo principal</title>
 
-	
-<script src="branch javascript.js"></script>
-
-<script src="javascript/Jquery/jquery-1.6.3.min.js"></script>
+<script src="Jquery/jquery-1.6.3.min.js"></script>
 	
 <script>
 	
 $(function(){
 	$("body").hide().fadeIn(3000);
 });	
-			
-</script>
-<script>
-
-alert("salida por consola,imprime en pantalla");
-<<<<<<< HEAD
-document.write("<p><h1>Esto es javaScript</p>");
-=======
-document.write("<p><h1>Esto es javaScript</h1></p>");
-
->>>>>>> branch-JS
-
 </script>
 	
 
 </head>
 	
 
-<body id="colorWeb">
+<body id="colorweb">
 	
 	<script>	
-	var colorWeb=document.getElementById("colorWeb");
+		var colorbody=document.getElementById("colorWeb");
 		var color=prompt("escribe un color rojo/azul/verde");
 		
 		if(color=="rojo"){
 			
-			colorWeb.style.backgroundColor="red";
+          colorbody.style.backgroundColor="red";
 		   
 		   }
 		else if(color=="verde"){
 			
-			colorWeb.style.backgroundColor="green";
+			colorbody.style.backgroundColor="green";
 		   
 		   }
 		else if(color=="azul"){
 			
-			colorWeb.style.backgroundColor="blue";
+			colorbody.style.backgroundColor="blue";
 		   
 		   }else{
 			   
 			   alert("el color no esta contemplado");
 			   
 		   }
-	</script>
-<<<<<<< HEAD
-=======
-	
 
->>>>>>> branch-JS
+	</script>
 
 
 <p>Bienvenidos al curso de JavaScript de <span>team international</span></p>
@@ -70,54 +51,33 @@ document.write("<p><h1>Esto es javaScript</h1></p>");
 
 	<p>Nombre de los aprendices de TEAM INTERNATIONAL  </p>
 	
-	<ul>
+<ul>
 	<script>
-<<<<<<< HEAD
-		
-		var nombres=new Array();
-=======
+
 		var nombres=new Array();
 		var nombre="";
 		var contador=0;
 		
 		while(nombre != "salir"){
 			contador++;
-			nombres[contador]=prompt("nombre del aprendiz");
-			nombre=nombres[contador];
+			nombre=prompt("nombre del aprendiz");
+			nombres[contador]=nombre;
+			
 			while(!isNaN(nombre)){
 				
 				alert("no es un nombre");
-				nombres[contador]=prompt("ingrese su nombre");
-				nombre=nombres[contador];
+				nombre=prompt("ingrese su nombre");
+				nombres[contador]=nombre;
 			}
-			
 			document.write("<li>"+nombres[contador]+"</li>")
 			
-			
 		}
-		nombres.pop();
->>>>>>> branch-JS
-	
-		for(var i=0;i<3;i++){
-		
-		nombres[i]=prompt("nombre del aprendiz");
-		
-		while(!isNaN(nombres[i])){
 			
-			alert("no es un nombre");
-			nombres[i]=prompt("nombre del aprendiz");
-			
-			
-		}
+			nombres.pop();
 		
-		document.write("<li>"+nombres[i]+"</li>");
-		
-		
-		
-	}
 		
 	</script>
-	</ul>
+</ul>
 	
 	<div>
 	nombre: <input type="text" id="nombre">
@@ -153,7 +113,7 @@ document.write("<p><h1>Esto es javaScript</h1></p>");
 	
 	</script>
 	
-	<p>texto desde branch JS</p>
+
 	
 
 

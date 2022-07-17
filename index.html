@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>parte practica</title>
+
+	
+<script src="branch javascript.js"></script>
+
+<script src="javascript/Jquery/jquery-1.6.3.min.js"></script>
+	
+<script>
+	
+$(function(){
+	$("body").hide().fadeIn(3000);
+});	
+			
+</script>
+<script>
+
+alert("salida por consola,imprime en pantalla");
+<<<<<<< HEAD
+document.write("<p><h1>Esto es javaScript</p>");
+=======
+document.write("<p><h1>Esto es javaScript</h1></p>");
+
+>>>>>>> branch-JS
+
+</script>
+	
+
+</head>
+	
+
+<body id="colorWeb">
+	
+	<script>	
+	var colorWeb=document.getElementById("colorWeb");
+		var color=prompt("escribe un color rojo/azul/verde");
+		
+		if(color=="rojo"){
+			
+			colorWeb.style.backgroundColor="red";
+		   
+		   }
+		else if(color=="verde"){
+			
+			colorWeb.style.backgroundColor="green";
+		   
+		   }
+		else if(color=="azul"){
+			
+			colorWeb.style.backgroundColor="blue";
+		   
+		   }else{
+			   
+			   alert("el color no esta contemplado");
+			   
+		   }
+	</script>
+<<<<<<< HEAD
+=======
+	
+
+>>>>>>> branch-JS
+
+
+<p>Bienvenidos al curso de JavaScript de <span>team international</span></p>
+
+
+	<p>Nombre de los aprendices de TEAM INTERNATIONAL  </p>
+	
+	<ul>
+	<script>
+<<<<<<< HEAD
+		
+		var nombres=new Array();
+=======
+		var nombres=new Array();
+		var nombre="";
+		var contador=0;
+		
+		while(nombre != "salir"){
+			contador++;
+			nombres[contador]=prompt("nombre del aprendiz");
+			nombre=nombres[contador];
+			while(!isNaN(nombre)){
+				
+				alert("no es un nombre");
+				nombres[contador]=prompt("ingrese su nombre");
+				nombre=nombres[contador];
+			}
+			
+			document.write("<li>"+nombres[contador]+"</li>")
+			
+			
+		}
+		nombres.pop();
+>>>>>>> branch-JS
+	
+		for(var i=0;i<3;i++){
+		
+		nombres[i]=prompt("nombre del aprendiz");
+		
+		while(!isNaN(nombres[i])){
+			
+			alert("no es un nombre");
+			nombres[i]=prompt("nombre del aprendiz");
+			
+			
+		}
+		
+		document.write("<li>"+nombres[i]+"</li>");
+		
+		
+		
+	}
+		
+	</script>
+	</ul>
+	
+	<div>
+	nombre: <input type="text" id="nombre">
+	edad:   <input type="text" id="edad">
+		
+	</div>
+	
+	<script>
+		
+	var nombre=prompt("nombre");
+		while(!isNaN(nombre)){
+			
+			alert("no es un nombre");
+			var nombre=prompt("nombre"); 
+			  }
+	var nombreId=document.getElementById("nombre");
+	nombreId.value=nombre;
+	nombreId.focus();
+	nombreId.style.color="red";
+		
+	var edad=prompt("edad");
+		while(isNaN(edad) || edad<=0 || edad>105){
+			  
+			alert("el valor no esta dentro de lo permitido");
+			var edad=prompt("edad");
+			  
+			  }
+		var edadId=document.getElementById("edad");
+		edadId.value=edad;
+		edad.color="red"
+		
+	
+	
+	</script>
+	
+	<p>texto desde branch JS</p>
+	
+
+
+</body>
+</html>

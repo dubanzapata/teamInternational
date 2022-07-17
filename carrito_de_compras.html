@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>carrito de compras</title>
+	<style>
+		#selector{
+			
+			float: left;
+			width: 35%;
+			
+			
+		}
+		
+		#estilo{
+			background-color: aqua;
+		}
+		/*<!--#contenedor{
+			
+			background-color: aqua;
+			position: absolute;
+			width: 100px;
+				
+			
+			
+		}-->
+	*/
+	
+	</style>
+	<script src="Jquery/jquery-1.6.3.min.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+			var array=document.querySelectorAll("#selector img"); 
+			
+			for(var i=0;array.length;i++){
+			array[i].addEventListener("click",cerrarImag,false);
+			}
+		
+		});
+		
+		function cerrarImag(e){
+			
+			if(e.target==arbol1){
+				
+			   $("#arbol1").replaceWith("<p id='arbol1'>agregado al carros de compras</p>");
+			   
+			   }
+			
+			if(e.target==arbol2){
+				
+			   $("#arbol2").replaceWith("<p id='arbol2'>agregado al carros de compras</p>");
+			   
+			   }
+			if(e.target==arbol3){
+				
+			   $("#arbol3").replaceWith("<p id='arbol3'>agregado al carros de compras</p>");
+			   
+			   }
+						
+		}
+		
+	
+	</script>
+</head>
+
+<body>
+	
+	
+	</div>
+	
+	<div id="selector">
+		<img src="imgs/arbol1.jpg" width="30%" id="arbol1">
+		<img src="imgs/arbol2.jpg" width="30%" id="arbol2">
+		<img src="imgs/arbol3.jpg" width="30%" id="arbol3">
+		
+		
+	
+	
+		
+	</div>
+</body>
+</html>

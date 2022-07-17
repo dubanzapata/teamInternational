@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+	<style>
+		
+		.texto1{
+			background-color: blue;
+			
+		}
+		.texto2{
+			
+			background-color: red;
+		}
+		div{
+			
+			width: 20%;
+			float: left;
+			
+		}
+	
+	</style>
+	<script src="../Documents/curso GIT_html_css_js/Jquery/jquery-1.6.3.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			/*document.getElementById("aumentar1").addEventListener("click",aumentar1,false);*/
+			
+			var array=document.querySelectorAll("input");
+			
+			
+			for(var i=0;i<array.length;i++){
+				
+				array[i]=addEventListener("click",aumento,false);
+				array[i]=addEventListener("click",reducir,false);
+			}
+			
+			
+			
+			
+		});
+		
+		function aumento(e){
+				
+			if(e.target==aumentar1){
+				
+				var ejemplo=$(".texto1").css("font-size");
+				ejemplo=parseInt(ejemplo);
+				$(".texto1").css({"font-size":ejemplo*1.5,"color":"green"});
+				}
+			else if(e.target==aumentar2){
+				
+				var ejemplo=$(".texto2").css("font-size");
+				ejemplo=parseInt(ejemplo);
+				$(".texto2").css("font-size",ejemplo*1.5);
+				}
+			
+			
+				
+			}
+			
+		function reducir(e){
+			
+			if(e.target==reducir1){
+				
+				var ejemplo=$(".texto1").css("font-size");
+				ejemplo=parseInt(ejemplo);
+				$(".texto1").css("font-size",ejemplo*0.5);
+				}
+			else if(e.target==reducir2){
+				
+				var ejemplo=$(".texto2").css("font-size");
+				ejemplo=parseInt(ejemplo);
+				$(".texto2").css("font-size",ejemplo*0.5);
+				}
+			
+			
+			
+		}
+		
+	
+	
+	</script>
+</head>
+
+<body>
+	
+	<div class="texto1">
+		
+	Un texto es una composición de signos codificados en un sistema de escritura que forma una unidad de sentido. También es una composición de caracteres imprimibles generados por un algoritmo de cifrado que, aunque no tienen sentido para cualquier persona, sí puede ser descifrado por su destinatario original
+	<table><tr><td style="text-align: left"><input type="button" value="aumentar" id="aumentar1"><td style="text-align: right"><input type="button" value="reducir1" id="reducir1"></td></td></tr></table>
+	</div>
+		
+	
+	<div class="texto2">
+	Un texto es una composición de signos codificados en un sistema de escritura que forma una unidad de sentido. También es una composición de caracteres imprimibles generados por un algoritmo de cifrado que, aunque no tienen sentido para cualquier persona, sí puede ser descifrado por su destinatario original
+	<table><tr><td style="text-align: left"><input type="button" value="aumentar" id="aumentar2"><td style="text-align: right"><input type="button" value="reducir" id="reducir2"></td></td></tr></table>
+	</div>
+	
+	
+		
+		
+	
+	
+	
+	
+</body>
+</html>

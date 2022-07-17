@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>atributos css dinamicos</title>
+	<style>
+		.linkdestacados{
+			background-color: aqua;
+		}
+		.cursos{
+			
+			background-color: chartreuse;
+		}
+	</style>
+	<script src="Jquery/jquery-1.6.3.min.js"></script>
+	
+	<script>
+	$(document).ready(function(){
+		
+		//$("a[href^='https://']").addClass("linkdestacados");
+	
+		document.getElementById("destacado").addEventListener("click",destacado,false);
+		document.getElementById("curso").addEventListener("click",curso,false);	
+		
+	})	
+	
+		
+		function destacado(){
+			
+			
+			$(".link").toggleClass("linkdestacados");
+		}
+		
+		function curso(){
+			
+			alert("hola");
+			$(".curso").toggleClass("cursos");
+		}
+		
+		
+	</script>
+	
+</head>
+
+<body>
+	
+	link destacados:<input type="checkbox" value="destacado" id="destacado">
+	cursos:<input type="checkbox" value="curso" id="curso">
+	<div id="contieneEnlaces">
+	<ul>
+		<li><a href="https://www.youtube.com/watch?v=oivLtfCSKRc&list=PLU8oAlHdN5BmpobVmj1IlneKlVLJ84TID&index=35" class="link">
+			pildorasinformaticas</a></li>
+		<li><a href="https://docs.google.com/document/d/1Y1eGoJmOczNsJAJ17-hMvDZ5oF1yI8MT/edit" class="link">drive</a></li>
+		<li><a href="file:///C:/Users/Duban%20y%20Andrea/Documents/curso%20GIT_html_css_js/carrito%20de%20compras.html" class="curso">curso</a></li>
+	</ul>
+	</div>
+</body>
+</html>

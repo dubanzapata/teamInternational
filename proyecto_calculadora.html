@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>calculadora</title>
+	<script>
+		function texto(){
+		
+		alert("esto es una imagen");
+	}
+	
+	</script>
+	<script>
+		var sumar=false;
+		var restar=false;
+		var p_operacion=true;
+		var cifra="";
+		var acumulado=0;
+		
+		function display(numero){
+			
+			document.getElementById("display").value=cifra+numero;
+			cifra=document.getElementById("display").value;
+			
+			
+		}
+		
+	   function suma(){
+		   if(restar){
+			   
+			acumulado=acumulado-parseInt(cifra);
+		    document.getElementById("display").value=acumulado; 
+		   }else{
+		   acumulado=acumulado+parseInt(cifra);
+		   document.getElementById("display").value=acumulado;
+			   }
+		   cifra="";
+		   sumar=true;
+		   restar=false;
+		   p_operacion=false;
+	   }
+		
+		function resta(){
+			if(p_operacion==false){
+
+			if(sumar){
+				acumulado=acumulado+parseInt(cifra);
+				document.getElementById("display").value=acumulado;
+				}
+				else{
+		   			acumulado=acumulado-parseInt(cifra);
+					document.getElementById("display").value=acumulado;
+					}
+				}
+				else{
+						acumulado=parseInt(cifra);
+						p_operacion=false;	
+						
+					}
+				
+				
+		   		cifra="";
+		   
+		   		sumar=false;
+		   		restar=true;
+	   }
+		 
+		function resultado(){
+			
+			if(sumar){
+				
+				document.getElementById("display").value=acumulado+parseInt(cifra);
+			}
+			else if(restar){
+				
+				document.getElementById("display").value=acumulado-parseInt(cifra);
+			}
+			acumulado=document.getElementById=("display").value;
+			cifra=0;
+			
+		}
+	
+		
+	</script>
+</head>
+
+<body>
+	
+	<table  border="3">
+		<tr>
+			<td><input id="display" type="text" id="display"></td>
+		</tr>
+			 
+		<tr>
+			<td>
+			<input type="button" name="num" value="+" width="21" onClick="suma()">
+			<input type="button" name="num" value="-" width="21" onClick="resta()">
+			<input type="button" name="num" value="*" width="21">
+			<input type="button" name="num" value="/" width="21">
+			</td>
+		
+		</tr>
+		<tr>
+		<td><input type="button" name="num" id="num7" value="7" onClick="display(7)">
+			<input type="button" name="num" id="num8" value="8" onClick="display(8)">
+			<input type="button" name="num" id="num9" value="9" onClick="display(9)">
+		</td>
+	
+		</tr>
+		<tr>
+		<td><input type="button" name="num" id="num7" value="4" onClick="display(4)">
+			<input type="button" name="num" id="num7" value="5" onClick="display(5)">
+			<input type="button" name="num" id="num7" value="6" onClick="display(6)">
+		</td>
+	
+		</tr>
+		<tr>
+		<td><input type="button" name="num" id="num1" value="1" onClick="display(1)">
+			<input type="button" name="num" id="num2" value=2 onClick="display(2)">
+			<input type="button" name="num" id="num3" value="3" onClick="display(3)">
+		</td>
+	
+		</tr>
+		<tr>
+			<td><input type="button" name="num" id="zero" value="0" onClick="display(0)">
+				<input type="button" name="num" id="igual" value="=" onClick="resultado()">
+					   </td>
+		</tr>
+		
+		
+		
+		
+	</table>
+		<script>document.getElementById("display").value=0;</script>
+</body>
+</html>
